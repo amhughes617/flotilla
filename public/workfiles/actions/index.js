@@ -8,6 +8,7 @@ export const UPDATE_LOC_SEARCH = 'UPDATE_LOC_SEARCH';
 const ROOT_URL = 'localhost:8080';
 const GMAP_URL = 'gmapsapiroot';
 
+/*grabs landings data from server*/
 export function fetchLandings () {
   const request = axios.get(`${ROOT_URL}/landings`);
 
@@ -16,7 +17,7 @@ export function fetchLandings () {
     payload: request
   };
 }
-
+/*searches for location, will move center of google map to top search result*/
 export function searchLocaction (search) {
   const request = axios.get(`${GMAP_URL}/${search}`);
 
@@ -25,7 +26,7 @@ export function searchLocaction (search) {
     payload: request
   };
 }
-
+/*takes action type as arg, can be reused for all input bars by importing type to component*/
 export function updateInput(type, input) {
   return {
     type: type,

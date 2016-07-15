@@ -8,6 +8,8 @@ import Legend from '../components/map_legend';
 
 import { fetchLandings, searchLocation as search, updateInput } from '../actions/index';
 
+/*container for page that includes map and map functionality components
+  passes action creators as props, will change to pass only dispatch down*/
 class MapPage extends Component {
 
   render() {

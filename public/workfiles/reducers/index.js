@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 import MapReducer from './map_reducer';
 
+/*combines all reducers into global app state*/
 const rootReducer = combineReducers({
   map: MapReducer,
 });
